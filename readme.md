@@ -8,3 +8,25 @@ To run this script, you need Python installed on your machine. Clone this reposi
 
 ```bash
 pip install -r requirements.txt
+```
+
+## Usage
+Run the script with the following command:
+
+```bash
+python optimized_pixel_art.py <path_to_image>
+```
+
+Optionally, you can specify a block size:
+
+```bash
+python optimized_pixel_art.py <path_to_image> <block_size>
+```
+
+Replace <path_to_image> with the path to your image file and <block_size> with the desired size of each pixel block (optional).
+
+## Learning Purpose
+
+This project is intended for educational purposes. It provides a practical example of image processing using Python, demonstrating techniques such as color analysis, multiprocessing, and image manipulation with libraries like NumPy and PIL.
+
+
