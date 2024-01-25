@@ -14,13 +14,13 @@ pip install -r requirements.txt
 Run the script with the following command:
 
 ```bash
-python optimized_pixel_art.py <path_to_image>
+python img_to_pixel_art.py <path_to_image>
 ```
 
 Optionally, you can specify a block size:
 
 ```bash
-python optimized_pixel_art.py <path_to_image> <block_size>
+python img_to_pixel_art.py <path_to_image> <block_size>
 ```
 
 Replace <path_to_image> with the path to your image file and <block_size> with the desired size of each pixel block (optional).
