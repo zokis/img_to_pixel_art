@@ -139,11 +139,7 @@ def create_reduced_image(image_array, block_size: int):
 def main(image_path, n_colors=256, specified_block_size=None):
     print(f"Processing image: {image_path}")
     # Load the image
-    image = (
-        Image.open(image_path)
-        .quantize(colors=n_colors, method=Image.MEDIANCUT)
-        .convert("RGB")
-    )
+    image = Image.open(image_path).quantize(colors=n_colors).convert("RGB")
     image_array = np.array(image)
     height, width = image_array.shape[:2]
 

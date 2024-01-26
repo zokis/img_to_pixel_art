@@ -35,11 +35,11 @@ This project is intended for educational purposes. It provides a practical examp
 To see the difference between pixel art transformation and conventional resizing methods, compare the three images. The pixel art image will have a distinct, stylized appearance that differs significantly from the smoothly resized image.
 
 ### Original
-![Original](coffee-vintage-retro-poster.png "Original")
+![Original](vulcao.png "Original")
 
 ### Pixeled
-![Pixeled](coffee-vintage-retro-poster_5_pixeled.png "Pixeled")
+![Pixeled](vulcao_6_pixeled.png "Pixeled")
 
 ### Resized
-![Resized](coffee-vintage-retro-poster-resized.png "Resized")
+![Resized](vulcao_6_resized.png "Resized")
 
