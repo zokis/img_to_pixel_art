@@ -31,3 +31,15 @@ Replace <path_to_image> with the path to your image file and <block_size> with t
 This project is intended for educational purposes. It provides a practical example of image processing using Python, demonstrating techniques such as color analysis, multiprocessing, and image manipulation with libraries like NumPy and PIL.
 
 
+## Comparing Results
+To see the difference between pixel art transformation and conventional resizing methods, compare the three images. The pixel art image will have a distinct, stylized appearance that differs significantly from the smoothly resized image.
+
+### Original
+![Original](coffee-vintage-retro-poster.png "Original")
+
+### Pixeled
+![Pixeled](coffee-vintage-retro-poster_5_pixeled.png "Pixeled")
+
+### Resized
+![Resized](coffee-vintage-retro-poster-resized.png "Resized")
+
