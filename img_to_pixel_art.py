@@ -1,4 +1,4 @@
-import sys
+import argparse
 import numpy as np
 import multiprocessing
 from PIL import Image
@@ -136,10 +136,14 @@ def create_reduced_image(image_array, block_size: int):
     return Image.fromarray(reduced_image_array)
 
 
-def main(image_path, specified_block_size=None):
+def main(image_path, n_colors=256, specified_block_size=None):
     print(f"Processing image: {image_path}")
     # Load the image
-    image = Image.open(image_path).convert("RGB")
+    image = (
+        Image.open(image_path)
+        .quantize(colors=n_colors, method=Image.MEDIANCUT)
+        .convert("RGB")
+    )
     image_array = np.array(image)
     height, width = image_array.shape[:2]
 
@@ -171,7 +175,21 @@ def main(image_path, specified_block_size=None):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Correct usage: python optimized_pixel_art.py.py <path_to_image>")
-    else:
-        main(sys.argv[1])
+    parser = argparse.ArgumentParser(description="Convert images to pixel art.")
+    parser.add_argument("image_path", type=str, help="Path to the input image")
+    parser.add_argument(
+        "--block_size",
+        type=int,
+        default=None,
+        help="Block size for pixelation (optional)",
+    )
+    parser.add_argument(
+        "--n_colors",
+        type=int,
+        default=256,
+        help="Number of colors to reduce to (optional, default=256)",
+    )
+
+    args = parser.parse_args()
+
+    main(args.image_path, n_colors=args.n_colors, specified_block_size=args.block_size)

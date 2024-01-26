@@ -17,10 +17,11 @@ Run the script with the following command:
 python img_to_pixel_art.py <path_to_image>
 ```
 
-Optionally, you can specify a block size:
+To specify a block size and the number of colors, use:
 
 ```bash
-python img_to_pixel_art.py <path_to_image> <block_size>
+python img_to_pixel_art.py <path_to_image --block_size <block_size> --n_colors <n_colors>
+
 ```
 
 Replace <path_to_image> with the path to your image file and <block_size> with the desired size of each pixel block (optional).
