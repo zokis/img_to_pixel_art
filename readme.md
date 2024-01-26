@@ -43,3 +43,6 @@ To see the difference between pixel art transformation and conventional resizing
 ### Resized
 ![Resized](vulcao_6_resized.png "Resized")
 
+### Diff
+![Diff](diff.png "Diff")
+
